@@ -11,50 +11,55 @@ Register and Log In
 View Assigned Submissions
 Accept or Reject Submissions
 Endpoints
+
 User Endpoints
+
 POST /register - Register a new user.
+
 POST /login - User login.
+
 POST /upload - Upload an assignment.
+
 GET /admins - Fetch all available admins.
+
 Admin Endpoints
+
 POST /register - Register a new admin.
+
 POST /login - Admin login.
+
+
 GET /assignments - View assignments tagged to the admin.
+
 POST /assignments/:id/accept - Accept an assignment.
+
 POST /assignments/:id/reject - Reject an assignment.
+
+
 Database Schema
 User Collection
 json
 Copy code
-{
-  "_id": "ObjectId",
-  "username": "String",
-  "password": "String",
-  "role": "String" // 'user' or 'admin'
-}
+                  {
+                 "_id": "ObjectId",
+                  "username": "String",
+                    "password": "String",
+                    "role": "String" // 'user' or 'admin'
+                                        }
 Assignment Collection
 json
+
 Copy code
 {
   "_id": "ObjectId",
-  "userId": "String",
-  "task": "String",
-  "admin": "String",
-  "status": "String", // 'pending', 'accepted', or 'rejected'
-  "createdAt": "Date"
-}
-Setup
-Prerequisites
-Node.js
-MongoDB
-Installation
+  "userId": "
 Clone the repository:
 
 bash
 Copy code
 git clone <repository-url>
 cd assignment-submission-portal
-Install dependencies:
+Install dependencies:    
 
 bash
 Copy code
